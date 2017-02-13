@@ -6,7 +6,7 @@
 				@if( $menuItem->parent_id == null )
 
 					<div id="ui-state-default">
-						<li class="list-group-item">
+						<li class="list-group-item" >
 									<input type="hidden" value="{{csrf_token()}}" class="token">
 									<input type="hidden" value="{{$menuItem->id}}" class="menuItemid">
 									<input type="hidden" value="{{$parent_num}}"  class="parent_num"> 
@@ -20,20 +20,24 @@
 
 									</a>
 									<span class="pull-right">
-										<a 	style="cursor: pointer;" 
-										type="button" 
-										data-toggle="modal" 
-										data-target="#MenuModalEdit" 
-										onclick="launch_Edit_Modal({{$menuItem->id}})" >
+										<a  class="editBtn"	
+											style="cursor: pointer;" 
+											type="button" 
+											data-toggle="modal" 
+											data-target="#MenuModalEdit"
+											data-value="{{$menuItem->id}}" 
+										 >
 
 										Edit
 									</a>
 									|
-									<a 	style="cursor: pointer;" 
-									type="button" 
-									data-toggle="modal" 
-									data-target="#MenuModalDelete" 
-									onclick="launch_Delete_Modal({{$menuItem->id}})" >
+									<a 	class="deleteBtn"	
+										style="cursor: pointer;" 
+										type="button" 
+										data-toggle="modal" 
+										data-target="#MenuModalDelete" 
+										data-value="{{$menuItem->id}}"
+									 >
 
 									Delete
 								</a>
@@ -57,19 +61,23 @@
 										<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
 											{{ $subMenuItem->menu_name }}
 											<span class="pull-right">
-												<a style="cursor: pointer;"
-												type="button" 
-												data-toggle="modal" 
-												data-target="#MenuModalEdit" 
-												onclick="launch_Edit_Modal({{$subMenuItem->id}})" >
+												<a 	class="editBtnchild" 
+													style="cursor: pointer;"
+													type="button" 
+													data-toggle="modal" 
+													data-target="#MenuModalEdit" 
+													data-value="{{$subMenuItem->id}}"
+												 >
 												Edit
 											</a>
 											|
-											<a style="cursor: pointer;"
-											type="button" 
-											data-toggle="modal" 
-											data-target="#MenuModalDelete" 
-											onclick="launch_Delete_Modal({{$subMenuItem->id}})" >
+											<a 	class="deleteBtnchild" 
+												style="cursor: pointer;"
+												type="button" 
+												data-toggle="modal" 
+												data-target="#MenuModalDelete" 
+												data-value="{{$subMenuItem->id}}"
+											 >
 											Delete
 											</a>
 											</span>

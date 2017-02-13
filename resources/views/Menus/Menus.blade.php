@@ -2,9 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	   <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Dynamic-Menu with laravel</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="{{URL::asset('js/jquery-ui-1.12.1.custom/jquery-ui.css')}}">
 
 </head>
@@ -47,10 +51,11 @@
 		</div>
 	</div>		
 
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	@include('Menus.partial.menuscript')
-	<script type="text/javascript" src="{{URL::asset('js/Menu/menuItemsort.js')}}"></script>
+<!-- Scripts -->
+<script src="/js/app.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="{{URL::asset('js/Menu/menu.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/Menu/menuItemsort.js')}}"></script>
 
 </body>
 </html>

@@ -37,7 +37,7 @@
 				<div class="modal-footer">
 					<input type="hidden" name="menu_id" id="menu_delete_id" value="" />
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-danger" onclick="Delete_menu()">Delete this Item</button>
+					<button type="submit" class="btn btn-danger deletemodalBtn" >Delete this Item</button>
 				</div>
 			</form>
 		</div>

@@ -35,7 +35,7 @@
 				<div class="modal-footer">
 					<input type="hidden" name="menu_id" id="menu_edit_id" value="" />
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary" onclick="Update_menu()">Update Menu</button>
+					<button type="submit" class="btn btn-primary updatemodalBtn" >Update Menu</button>
 				</div>
 			</form>
 		</div>
